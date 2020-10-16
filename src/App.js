@@ -16,6 +16,13 @@ function App() {
     ])
   }
 
+  // ELIMINAR TAREA
+  const deleteTask = (task) => {
+    setTasks(
+      tasks.filter(elem => elem.task !== task)
+    )
+  }
+
   return (
     <div>
       <ListTasks 
@@ -23,6 +30,8 @@ function App() {
         addTask={addTask}
         // Mandando el state 'task' como props al componente 'ListTasks'
         tasks={tasks}
+        // Mandando la función 'deleteTask' como props al componente 'ListTasks'
+        deleteTask={deleteTask}
       />     
     </div>
   );

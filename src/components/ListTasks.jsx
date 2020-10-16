@@ -20,7 +20,10 @@ export default function List(props) {
                             className="list-group-item d-flex"
                             key={index}>
                                 {task.task}
-                                <button className="btn btn-secondary rounded-circle font-weight-bold ml-auto">
+                                <button 
+                                    className="btn btn-secondary rounded-circle font-weight-bold ml-auto"
+                                    onClick={() => {props.deleteTask(task.task)}}
+                                    >
                                     x
                                 </button>
                         </li>
